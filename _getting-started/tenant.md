@@ -1,5 +1,5 @@
 ---
-title: What is a tenant?
+title: What is a tenant 2?
 layout: article
 section: Advanced Concepts
 since: 20190110
