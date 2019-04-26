@@ -5,9 +5,9 @@ section: Basic Components
 ---
 
 
-> PostgreSQL component for the [elastic.io platform](http://www.elastic.io) that also works well with AWS Redshift
+> PostgreSQL component for the [{{site.data.tenant.name}} platform](http://www.{{site.data.tenant.name}}) that also works well with AWS Redshift
 
-This is an open source component for working with [PostgreSQL](https://en.wikipedia.org/wiki/PostgreSQL) object-relational database management system on [elastic.io platform](http://www.elastic.io "elastic.io platform") it also works well with [AWS Redshift](https://aws.amazon.com/redshift/).
+This is an open source component for working with [PostgreSQL](https://en.wikipedia.org/wiki/PostgreSQL) object-relational database management system on [{{site.data.tenant.name}} platform](http://www.{{site.data.tenant.name}} "{{site.data.tenant.name}} platform") it also works well with [AWS Redshift](https://aws.amazon.com/redshift/).
 
 ## What's inside
 
@@ -134,10 +134,4 @@ If in doubt call support.
 
 ## License
 
-Apache-2.0 © [elastic.io GmbH](http://elastic.io)
-
-
-[travis-image]: https://travis-ci.org/elasticio/postgresql-component.svg?branch=master
-[travis-url]: https://travis-ci.org/elasticio/postgresql-component
-[daviddm-image]: https://david-dm.org/elasticio/postgresql-component.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/elasticio/postgresql-component
+Apache-2.0 © [{{site.data.tenant.name}} GmbH](http://{{site.data.tenant.name}})

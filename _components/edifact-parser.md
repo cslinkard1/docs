@@ -4,10 +4,10 @@ layout: article
 section: Utility Components
 ---
 
-> Integration component for elastic.io that parses EDIFACT files
+> Integration component for {{site.data.tenant.name}} that parses EDIFACT files
 
 # edifact-parser-component
-EDIFACT Parser component for the [elastic.io platform](http://www.elastic.io). It reads incoming attachments and
+EDIFACT Parser component for the [{{site.data.tenant.name}} platform](http://www.{{site.data.tenant.name}}). It reads incoming attachments and
 parses them using EDI parser.
 
 
@@ -25,12 +25,4 @@ Sample EDI file you can find [here](https://raw.githubusercontent.com/elasticio/
 
 ## License
 
-Apache-2.0 © [elastic.io GmbH](http://elastic.io)
-
-
-[npm-image]: https://badge.fury.io/js/edifact-parser-component.svg
-[npm-url]: https://npmjs.org/package/edifact-parser-component
-[travis-image]: https://travis-ci.org/elasticio/edifact-parser-component.svg?branch=master
-[travis-url]: https://travis-ci.org/elasticio/edifact-parser-component
-[daviddm-image]: https://david-dm.org/elasticio/edifact-parser-component.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/elasticio/edifact-parser-component
+Apache-2.0 © [{{site.data.tenant.name}} GmbH](http://{{site.data.tenant.name}})

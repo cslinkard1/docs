@@ -4,7 +4,7 @@ layout: article
 section: Utility Components
 ---
 
-LDAP component for the [elastic.io platform](http://www.elastic.io)
+LDAP component for the [{{site.data.tenant.name}} platform](http://www.{{site.data.tenant.name}})
 
 Lightweight Directory Access Protocol is an open, vendor-neutral, industry
 standard application protocol for accessing and maintaining distributed
@@ -49,9 +49,4 @@ This component interacts with LDAP v3.
 
 ## License
 
-Apache-2.0 © [Elastic.io GmbH](elastic.io)
-
-[travis-image]: https://travis-ci.org/elasticio/ldap-component.svg?branch=master
-[travis-url]: https://travis-ci.org/elasticio/ldap-component
-[daviddm-image]: https://david-dm.org/elasticio/ldap-component.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/elasticio/ldap-component
+Apache-2.0 © [{{site.data.tenant.name}} GmbH]({{site.data.tenant.name}})
