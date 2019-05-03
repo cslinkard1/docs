@@ -1,5 +1,5 @@
 ---
-title: What is a credential?
+title: Understanding credentials
 layout: article
 section: Basic Concepts
 order: 3
