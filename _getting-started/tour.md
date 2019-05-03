@@ -5,7 +5,7 @@ section: Basic Concepts
 order: 4
 ---
 
-Welcome to the user {{site.data.tenant.name}} interface tour. After first login you will see a similar view:
+Welcome to the user {{site.data.tenant.name}} interface tour. After first login you will see a page as shown in the following screenshot:
 
 ![Dashboard](/assets/img/getting-started/tour/tour1.png "Dashboard")
 
