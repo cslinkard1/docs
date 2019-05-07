@@ -60,9 +60,40 @@ curl {{apiBaseUri}}/v2/contracts \
 With the right [permissions](/managing-user-roles-in-a-tenant)
 a workspace member can get Contract data via the API. Namely, the following actions are available:
 
+1\. Get Contract by ID via the following request:
 
+`GET {{apiBaseUri}}/v2/contracts/CONTRACT_ID/`
 
-##### 1\. Workspace management via the UI
+Below are request payload parameters:
+
+| **Parameter**      | **Required** | **Description**                                                                  |
+|--------------------|--------------|----------------------------------------------------------------------------------|
+| `CONTRACT_ID`                | yes          | Contract ID |
+| `include`               | no         | Parameter for getting more detailed information regarding the Workspace’s entities. Allowed values: `members` and/or `invites`.                                                      |
+
+**EXAMPLE:**
+```
+curl {{apiBaseUri}}/v2/contracts/{CONTRACT_ID}?include=members,invites \
+   -u {EMAIL}:{APIKEY}
+```
+
+2\. Get Contracts via the following request:
+
+`GET {{apiBaseUri}}/v2/contracts/`
+
+**EXAMPLE:**
+```
+curl {{apiBaseUri}}/v2/contracts/
+  -u {EMAIL}:{APIKEY}
+```
+
+2\. Get a list of Contract members
+
+3\. Get a list of pending invites
+
+4\. Get Contract roles
+
+##### 1\. Get Contract by ID
 includes adding or inviting new members, managing their workspace [user roles](/managing-user-roles-in-a-tenant), removing members, renaming and deleting the
 workspace. All these actions are done in **Workspace** tab
 of the navigational menu:
