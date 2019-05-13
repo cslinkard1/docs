@@ -12,7 +12,7 @@ actions: [creating Contracts](#creating-contracts), [retrieving Contract data](#
 ## Creating Contracts
 
 A [Contract](/getting-started/contracts-and-workspaces) is an enclosed environment, which contains Workspaces.
-A Tenant member with the corresponding permissions can create Contracts in his Tenant via the following request:
+A Tenant member with the corresponding permissions can create Contracts in their Tenant via the following request:
 
 `POST {{apiBaseUri}}/v2/contracts`
 
@@ -20,7 +20,7 @@ Below are request payload parameters:
 
 | **Parameter**                    | **Required** | **Description**                                   |
 |----------------------------------|--------------|---------------------------------------------------|
-| `type`                             | yes          | Allowed value: `workspace` |
+| `type`                             | yes          | Allowed value: `contract` |
 | `attributes.name`                  | yes          | Name of the new Contract                         |
 | `attributes.available_roles[]`   | no          | A subset of the Tenant's roles.                                |
 
@@ -57,7 +57,7 @@ curl {{apiBaseUri}}/v2/contracts \
 ## Getting Contract Data
 
 With the right [permissions](/managing-user-roles-in-a-tenant)
-a workspace member can get Contract data via the API. Namely, the following actions are available:
+a Contract member can get Contract data via the API. Namely, the following actions are available:
 
 1\. Get Contract by ID via the following request:
 
@@ -68,7 +68,7 @@ Below are request payload parameters:
 | **Parameter**      | **Required** | **Description**                                                                  |
 |--------------------|--------------|----------------------------------------------------------------------------------|
 | `CONTRACT_ID`                | yes          | Contract ID |
-| `include`               | no         | Parameter for getting more detailed information regarding the Workspace’s entities. Allowed values: `members` and/or `invites`.                                                      |
+| `include`               | no         | Parameter for getting more detailed information regarding the Contract's entities. Allowed values: `members` and/or `invites`.                                                      |
 
 **EXAMPLE:**
 ```
@@ -151,8 +151,8 @@ Below are request payload parameters:
 | `type`                             | yes          | Allowed value: `contract-invite` |
 | `attributes.email`                  | yes          | Email                         |
 | `attributes.roles[]`   | yes          | Roles. To get all available roles, please execute the “Get the Contract’s roles” endpoint.                                 |
-| `attributes.workspace_id`   | no          | Corresponding Workspace ID.                                 |
-| `attributes.workspace_roles`   | no          | To get all available roles, please execute the “Get the Contract’s roles” endpoint.                                 |
+| `attributes.workspace_id`   | no          | Corresponding Workspace ID for cases when you want to invite a user into a Contract and a Workspace.                                 |
+| `attributes.workspace_roles`   | no (yes, if Workspace ID was specified)         | To get all available roles, please execute the “Get the Contract’s roles” endpoint.                                 |
 
 **EXAMPLE:**
 ```
@@ -243,7 +243,7 @@ curl {{apiBaseUri}}/v2/contracts/{CONTRACT_ID}/members/{USER_ID}/ \
 
 **IMPORTANT:**
 
-- If a contract only has one member, which is the Owner, it is still possible to remove this member. However, this user also will be removed from the Platform completely if he is not a member of other contracts.
+- If a contract only has one member, which is the Owner, it is still possible to remove this member. However, this user also will be removed from the Platform completely if they are not a member of other contracts.
 
 - It is not possible to remove the last Contract Owner, if there are still members in the Contract.
 
@@ -251,7 +251,7 @@ curl {{apiBaseUri}}/v2/contracts/{CONTRACT_ID}/members/{USER_ID}/ \
 
 A Contract member with the corresponding permissions can edit the Contract in the following ways:
 
-1\. Suspend Contract, which means stopping of all of its flows, via the following request:
+1\. Suspend Contract, which means stopping of all of its flows and inability of performing any actions with the Contract, via the following request:
 
 `POST {{apiBaseUri}}/v2/contracts/CONTRACT_ID/suspend/`
 
@@ -303,7 +303,7 @@ curl -i {{apiBaseUri}}/v2/contracts/{CONTRACT_ID} \
 ```
 
 **IMPORTANT:**
-The actual data deletion will be performed after an API response, as it requires time for termination of all the Contract’s flows containers. A Contract cannot be deleted if any of its Components are being used in another Contract Flow.
+The actual data deletion will be performed after an API response, as it requires time for termination of all the Contract’s flows containers. A Contract cannot be deleted if any of its Components are being used in a flow in another Contract.
 
 4\. Update a Contract's name and available roles via the following request:
 

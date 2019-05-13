@@ -83,7 +83,7 @@ curl {{apiBaseUri}}/v2/workspaces \
     }
   }'
 ```
-**NOTE:** Workspace name is limited by usable characters and length. It may contain only letters, digits, whitespaces, `-` and `_` symbols, and be up to 40 symbols long.
+**NOTE:** Workspace name is limited by usable characters and length. It may contain only letters, digits, whitespaces, `-` and `_` symbols, and be from 3 up to 40 symbols long.
 
 ## Editing the Workspace
 
@@ -324,13 +324,13 @@ curl -X POST {{apiBaseUri}}/v2/flows \
         "nodes":[  
           {  
             "id":"step_1",
-            "command":"elasticio/timer:timer@latest",
+            "command":"devTeam1/timer:timer@latest",
             "fields":{  
               "interval":"minute"
             }
           },
           {  
-            "command":"elasticio/email:send@latest",
+            "command":"devTeam1/email:send@latest",
             "fields":{  
 
             },
