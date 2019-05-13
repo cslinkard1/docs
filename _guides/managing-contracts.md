@@ -11,7 +11,7 @@ actions: [creating Contracts](#creating-contracts), [retrieving Contract data](#
 
 ## Creating Contracts
 
-A [Contract](/getting-started/contracts-and-workspaces) is an enclosed environment, which contains Workspaces.
+A [Contract](/getting-started/contracts-and-workspaces) is an enclosed environment, which contains Workspaces and DevTeams.
 A Tenant member with the corresponding permissions can create Contracts in their Tenant via the following request:
 
 `POST {{apiBaseUri}}/v2/contracts`
